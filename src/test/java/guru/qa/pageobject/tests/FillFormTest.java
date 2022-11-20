@@ -1,8 +1,8 @@
-package guru.qa.pageObject.tests;
+package guru.qa.pageobject.tests;
 
 import org.junit.jupiter.api.Test;
 
-import static guru.qa.pageObject.testData.StudentRegistrationFormData.*;
+import static guru.qa.pageobject.testdata.StudentRegistrationFormData.*;
 
 public class FillFormTest extends TestBase {
     @Test

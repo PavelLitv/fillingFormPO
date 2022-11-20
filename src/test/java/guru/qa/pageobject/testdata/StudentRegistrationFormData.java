@@ -1,4 +1,4 @@
-package guru.qa.pageObject.testData;
+package guru.qa.pageobject.testdata;
 
 public class StudentRegistrationFormData {
     public static String

@@ -1,7 +1,7 @@
-package guru.qa.pageObject.pages;
+package guru.qa.pageobject.pages;
 
-import guru.qa.pageObject.pages.components.ICalendar;
-import guru.qa.pageObject.pages.components.RegistrationResultsModal;
+import guru.qa.pageobject.pages.components.ICalendar;
+import guru.qa.pageobject.pages.components.RegistrationResultsModal;
 
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
