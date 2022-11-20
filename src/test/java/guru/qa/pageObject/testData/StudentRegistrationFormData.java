@@ -1,7 +1,8 @@
 package guru.qa.pageObject.testData;
 
 public class StudentRegistrationFormData {
-    public static String firstName = "Pavel",
+    public static String
+            firstName = "Pavel",
             lastName = "Li",
             email = "pavel_li@gmail.com",
             gender = "Male",
