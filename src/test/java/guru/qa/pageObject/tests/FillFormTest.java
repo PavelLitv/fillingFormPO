@@ -1,25 +1,12 @@
-package guru.qa.PO.tests;
+package guru.qa.pageObject.tests;
 
 import org.junit.jupiter.api.Test;
+
+import static guru.qa.pageObject.testData.StudentRegistrationFormData.*;
 
 public class FillFormTest extends TestBase {
     @Test
     void fillingFormTest() {
-        String firstName = "Pavel",
-                lastName = "Li",
-                email = "pavel_li@gmail.com",
-                gender = "Male",
-                phone = "7909808707",
-                birthDay = "06",
-                birthMonth = "March",
-                birthYear = "1980",
-                subjects = "Arts",
-                hobbies = "Sports",
-                picture = "img/photo.jpg",
-                currentAddress = "luxury village somewhere in Siberia",
-                state = "Haryana",
-                city = "Karnal";
-
         registrationPage.openPage()
                 .setFirstName(firstName)
                 .setLastName(lastName)
