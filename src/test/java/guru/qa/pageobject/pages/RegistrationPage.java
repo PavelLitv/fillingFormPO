@@ -1,12 +1,16 @@
 package guru.qa.pageobject.pages;
 
-import guru.qa.pageobject.pages.components.ICalendar;
+import guru.qa.pageobject.pages.components.Calendar;
 import guru.qa.pageobject.pages.components.RegistrationResultsModal;
+
+import java.util.Date;
 
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
-public class RegistrationPage implements ICalendar {
+public class RegistrationPage {
+
+    Calendar calendar = new Calendar();
 
     RegistrationResultsModal registrationResultsModal = new RegistrationResultsModal();
 
@@ -48,9 +52,9 @@ public class RegistrationPage implements ICalendar {
         return this;
     }
 
-    public RegistrationPage setBirthDayDate(String birthDay, String birthMonth, String birthYear) {
+    public RegistrationPage setBirthDayDate(Date birthday) {
         $("#dateOfBirthInput").click();
-        setDate(birthDay, birthMonth, birthYear);
+        calendar.setDate(birthday);
         return this;
     }
 
