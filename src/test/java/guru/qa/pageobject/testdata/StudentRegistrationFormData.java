@@ -1,19 +1,36 @@
 package guru.qa.pageobject.testdata;
 
+import java.util.Date;
+
+import static guru.qa.pageobject.testdata.RandomData.*;
+
 public class StudentRegistrationFormData {
-    public static String
-            firstName = "Pavel",
-            lastName = "Li",
-            email = "pavel_li@gmail.com",
-            gender = "Male",
-            phone = "7909808707",
-            birthDay = "06",
-            birthMonth = "March",
-            birthYear = "1980",
-            subjects = "Arts",
-            hobbies = "Sports",
-            picture = "img/photo.jpg",
-            currentAddress = "luxury village somewhere in Siberia",
-            state = "Haryana",
-            city = "Karnal";
+    public String
+            firstName,
+            lastName,
+            email,
+            gender,
+            phone,
+            subjects,
+            hobbies,
+            picture,
+            currentAddress,
+            state,
+            city;
+    public Date birthday;
+
+    public StudentRegistrationFormData(){
+        this.firstName = getRandomFirstName();
+        this.lastName = getRandomLastName();
+        this.email = getRandomEmail();
+        this.gender = getRandomGender();
+        this.phone = getRandomNumber(10);
+        this.birthday = getRandomBirthday();
+        this.subjects = getRandomSubject();
+        this.hobbies = getRandomHobbies();
+        this.picture = "img/photo.jpg";
+        this.currentAddress = getRandomAddress();
+        this.state = getRandomState();
+        this.city = getRandomCity(state);
+    }
 }
