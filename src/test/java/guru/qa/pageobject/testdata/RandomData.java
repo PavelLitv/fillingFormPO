@@ -68,7 +68,7 @@ public class RandomData {
         mapStateAndCity.put("Haryana", new String[]{"Karnal", "Panipat"});
         mapStateAndCity.put("Rajasthan", new String[]{"Jaipur", "Jaiselmer"});
 
-        String[] cities = mapStateAndCity.get(key);
-        return cities[random.nextInt(cities.length)];
+        String[] arrayCities = mapStateAndCity.get(key);
+        return arrayCities[random.nextInt(arrayCities.length)];
     }
 }
