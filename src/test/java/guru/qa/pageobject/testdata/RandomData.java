@@ -42,23 +42,23 @@ public class RandomData {
     }
 
     public static String getRandomGender() {
-        String[] arraySubject = {"Male", "Female", "Other"};
-        return arraySubject[random.nextInt(arraySubject.length)];
+        String[] arrayGenders = {"Male", "Female", "Other"};
+        return arrayGenders[random.nextInt(arrayGenders.length)];
     }
 
     public static String getRandomSubject() {
-        String[] arraySubject = {"Maths", "Arts", "Commerce", "Civics", "Hindi"};
-        return arraySubject[random.nextInt(arraySubject.length)];
+        String[] arraySubjects = {"Maths", "Arts", "Commerce", "Civics", "Hindi"};
+        return arraySubjects[random.nextInt(arraySubjects.length)];
     }
 
     public static String getRandomHobbies() {
-        String[] arraySubject = {"Sports", "Reading", "Music"};
-        return arraySubject[random.nextInt(arraySubject.length)];
+        String[] arrayHobbies = {"Sports", "Reading", "Music"};
+        return arrayHobbies[random.nextInt(arrayHobbies.length)];
     }
 
     public static String getRandomState() {
-        String[] states = {"NCR", "Uttar Pradesh", "Haryana", "Rajasthan"};
-        return states[random.nextInt(states.length)];
+        String[] arrayStates = {"NCR", "Uttar Pradesh", "Haryana", "Rajasthan"};
+        return arrayStates[random.nextInt(arrayStates.length)];
     }
 
     public static String getRandomCity(String key) {
