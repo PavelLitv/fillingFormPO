@@ -10,34 +10,29 @@ import java.util.Random;
 public class RandomData {
 
     static Random random = new Random();
+    static Faker faker = new Faker();
 
     public static String getRandomFirstName() {
-        Faker faker = new Faker();
         return faker.name().firstName();
     }
 
     public static String getRandomLastName() {
-        Faker faker = new Faker();
         return faker.name().lastName();
     }
 
     public static String getRandomEmail() {
-        Faker faker = new Faker();
         return faker.internet().emailAddress();
     }
 
     public static String getRandomNumber(int length) {
-        Faker faker = new Faker();
         return faker.number().digits(length);
     }
 
     public static Date getRandomBirthday() {
-        Faker faker = new Faker();
         return faker.date().birthday();
     }
 
     public static String getRandomAddress() {
-        Faker faker = new Faker();
         return faker.address().fullAddress();
     }
 
