@@ -1,16 +1,31 @@
 package guru.qa.pageobject.tests;
 
-import com.codeborne.selenide.Configuration;
+import guru.qa.pageobject.helpers.Attach;
 import guru.qa.pageobject.pages.RegistrationPage;
+import io.qameta.allure.Step;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 
+import static guru.qa.pageobject.helpers.DriverHelper.JENKINS;
+import static guru.qa.pageobject.helpers.DriverHelper.configDriver;
+
 public class TestBase {
+
     RegistrationPage registrationPage = new RegistrationPage();
 
+    @Step("Конфигурирование драйвера")
     @BeforeAll
     static void beforeAll() {
-        Configuration.baseUrl = "https://demoqa.com";
-        Configuration.browserSize = "1920x1080";
-//        Configuration.holdBrowserOpen = true;
+        configDriver();
+    }
+
+    @AfterEach
+    void addAttachments() {
+        if (JENKINS) {
+            Attach.screenshotAs("Last screenshot");
+            Attach.pageSource();
+            Attach.browserConsoleLogs();
+            Attach.addVideo();
+        }
     }
 }

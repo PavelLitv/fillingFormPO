@@ -1,16 +1,17 @@
 package guru.qa.pageobject.tests;
 
 import guru.qa.pageobject.testdata.StudentRegistrationFormData;
+import io.qameta.allure.Owner;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import java.text.SimpleDateFormat;
-import java.util.Locale;
-
 public class FillFormTest extends TestBase {
+
     @Test
+    @Owner("Pavel Li")
+    @DisplayName("Проверка заполнения регистрационной формы")
     void fillingFormTest() {
         StudentRegistrationFormData regFormData = new StudentRegistrationFormData();
-        SimpleDateFormat formatter = new SimpleDateFormat("dd MMMMM,yyyy", Locale.ENGLISH);
 
         registrationPage.openPage()
                 .setFirstName(regFormData.firstName)
@@ -18,7 +19,7 @@ public class FillFormTest extends TestBase {
                 .setUserEmail(regFormData.email)
                 .setGender(regFormData.gender)
                 .setPhone(regFormData.phone)
-                .setBirthDayDate(regFormData.birthday)
+                .setBirthDayDate(regFormData.getBirthday())
                 .setSubject(regFormData.subjects)
                 .setHobbies(regFormData.hobbies)
                 .uploadPicture(regFormData.picture)
@@ -31,7 +32,7 @@ public class FillFormTest extends TestBase {
                 .verifyResult("Student Email", regFormData.email)
                 .verifyResult("Gender", regFormData.gender)
                 .verifyResult("Mobile", regFormData.phone)
-                .verifyResult("Date of Birth",formatter.format(regFormData.birthday))
+                .verifyResult("Date of Birth", regFormData.getBirthday())
                 .verifyResult("Subjects", regFormData.subjects)
                 .verifyResult("Hobbies", regFormData.hobbies)
                 .verifyResult("Picture", regFormData.picture.substring(4))

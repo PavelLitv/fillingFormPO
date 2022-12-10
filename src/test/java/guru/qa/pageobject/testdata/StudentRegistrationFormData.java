@@ -1,6 +1,8 @@
 package guru.qa.pageobject.testdata;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Locale;
 
 import static guru.qa.pageobject.testdata.RandomData.*;
 
@@ -32,5 +34,10 @@ public class StudentRegistrationFormData {
         this.currentAddress = getRandomAddress();
         this.state = getRandomState();
         this.city = getRandomCity(state);
+    }
+
+    public String getBirthday() {
+        SimpleDateFormat formatter = new SimpleDateFormat("dd MMMMM,yyyy", Locale.ENGLISH);
+        return formatter.format(birthday);
     }
 }
