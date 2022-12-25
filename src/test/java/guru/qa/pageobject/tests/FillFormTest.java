@@ -9,7 +9,7 @@ public class FillFormTest extends TestBase {
 
     @Test
     @Owner("Pavel Li")
-    @DisplayName("Проверка заполнения регистрационной формы")
+    @DisplayName("check student form")
     void fillingFormTest() {
         StudentRegistrationFormData regFormData = new StudentRegistrationFormData();
 

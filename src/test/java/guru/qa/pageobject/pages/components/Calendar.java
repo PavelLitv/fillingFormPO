@@ -4,7 +4,6 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class Calendar {
     public void setDate(String date) {
-        System.out.println(date);
         String[] forNumber = date.split(" ");
         String[] dates = forNumber[1].split(",");
 
